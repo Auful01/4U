@@ -13,13 +13,13 @@ class PromoController extends Controller
 
     public function index()
     {
-        $data = Promo::all();
+        $data = Promo::with("category")->get();
         return $this->success($data);
     }
 
     public function show($id)
     {
-        $data = Promo::find($id);
+        $data = Promo::with("category")->find($id);
         return $this->success($data);
     }
 

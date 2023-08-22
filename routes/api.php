@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DoctorsController;
 use App\Http\Controllers\PromoController;
+use App\Http\Controllers\QuizAnswerController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\TipsCategoryController;
 use App\Http\Controllers\TipsController;

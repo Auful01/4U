@@ -16,4 +16,15 @@ class QuizAnswer extends Model
         "answer",
         "point",
     ];
+
+
+    /**
+     * Get the quiz associated with the QuizAnswer
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function quiz()
+    {
+        return $this->hasOne(Quiz::class, 'id', 'quiz_id');
+    }
 }

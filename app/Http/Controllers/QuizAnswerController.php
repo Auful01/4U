@@ -13,14 +13,14 @@ class QuizAnswerController extends Controller
 
     public function index()
     {
-        $data = QuizAnswer::all();
+        $data = QuizAnswer::with('quiz')->get();
 
         return $this->success($data);
     }
 
     public function show($id)
     {
-        $data = QuizAnswer::find($id);
+        $data = QuizAnswer::with('quiz')->find($id);
 
         return $this->success($data);
     }

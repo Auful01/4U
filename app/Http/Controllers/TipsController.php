@@ -13,12 +13,15 @@ class TipsController extends Controller
 
     public function index()
     {
-        return $this->success('Tips');
+        $data = Tips::with('tips_category')->get();
+        return $this->success($data);
     }
 
     public function show($id)
     {
-        return $this->success('Tips Detail');
+        $data = Tips::find($id);
+
+        return $this->success($data);
     }
 
     public function store(Request $request)
